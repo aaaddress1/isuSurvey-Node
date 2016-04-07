@@ -1,0 +1,48 @@
+doctype html
+html(lang="zh_tw")
+	head
+		meta(http-equiv="X-UA-Compatible",
+			name="viewport",
+			content="width=device-width, initial-scale=1, IE=edge",
+			charset="utf-8")
+
+
+		//- meta(property="og:type", content="article")
+		//- meta(property="og:url", content="http://lorextech.ddns.net:8000/")
+		//- meta(property="og:image", content="http://lorextech.ddns.net:8000/img/fb.png")
+		//- meta(property="og:title", content="FakeRC v1.0 假圖產生器")
+		//- meta(property="og:description", content="這是一個 RC 帳號假圖產生器，可以自動產生任何等級、任何 VIP 的帳號狀態。")
+
+		block title
+			title Default Title
+
+		//- Bootstrap CSS
+		link(href="http://bootswatch.com/superhero/bootstrap.css", rel="stylesheet")
+
+		//-Google 字體
+		link(rel="stylesheet", href="http://fonts.googleapis.com/earlyaccess/cwtexhei.css")
+		link(rel="stylesheet", href="http://fonts.googleapis.com/earlyaccess/cwtexming.css")
+		
+		//- 修正字體
+		link(rel="stylesheet", href="/css/font.css")
+
+		AngularJS
+		script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js")
+		script(src="/js/driver.js")
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	body()
+		
+		block content
+			h1.text-center Default Post
+		//- include ./footer
+
+		script(src="/js/jquery.js")
+		script(src="/js/bootstrap.min.js")
+		script(src="/js/jquery.easing.min.js")

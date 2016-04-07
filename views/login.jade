@@ -1,0 +1,27 @@
+extends ./template/bootstrap
+
+block title
+	title= '義大意見問卷工具(尚未登入)'
+block content
+
+	.container
+		center
+			h1 義守大學教學意見調查表機器人
+			h2 請登入帳號
+			h3(style= "color: orange;font-size:18px;")= errorMsg
+			form(name= 'eachClass', action='/login', method= 'POST')
+				div.input
+					input(type="text", name="usrId", placeholder="義守大學帳號", value= '')
+				div.input
+					input(type="password", name="usrPass", placeholder="義守大學密碼",value= '')
+				div.input
+					input.btn.btn-primary.btn-sm(type="submit",value= '登入帳號')
+
+		div.right
+			label 最後更新時間: 2016/4/7 
+			br
+			label 作者: aaaddress1@gmail.com (Shen-Hao Ma)
+			br
+			label 特別感謝: john0312@gmail.com, ceo@sita.tech, k@knowlet.me, github.com/Fonger
+			br
+			label 主機空間贊助: s884812@gmail.com

@@ -1,0 +1,37 @@
+extends ./template/bootstrap
+
+block title
+	title= '義大意見問卷工具('+ usrName +')'
+
+block content
+	.container
+		.page-header
+			h1 總覽
+		h2 您目前登入帳號：#{usrName}
+		h2= NewMessage
+		
+		table.table.table-striped.table-hover
+			thead
+				tr
+					th #
+					th 科目
+					th 老師
+					th Description
+					th 編號按鈕
+			tbody
+				
+					each item, i in list
+						tr
+							td= list[i][0]
+							td= list[i][1]
+							td= list[i][2]
+							td= list[i][3]
+							td
+								form(name= 'eachClass', action='/surveySend', method= 'POST')
+									div.input
+										input(type="hidden", name="classId", value= list[i][0])
+										input(type="hidden", name="className", value= list[i][1])
+										input(type="hidden", name="cmd", value= list[i][4])
+										input(type="hidden", name="userName", value= usrName)
+										input.btn.btn-primary.btn-sm(type="submit",value= '填寫此問卷')
+
