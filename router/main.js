@@ -34,7 +34,7 @@ router.route('/login')
 router.route('/surveySend')
 	.post(function(req, res){
 		survey.sendSurvey( req.body.classId, req.body.cmd, req, function(sendSurveyRes) {
-
+			//res.send( sendSurveyRes );
 			if ( sendSurveyRes.indexOf('您可填寫的課程意見評量表') > -1 ) {
 
 				isu.displayAll( req.body.userName, req, function(cb){
